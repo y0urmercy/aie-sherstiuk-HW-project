@@ -74,7 +74,7 @@ uv run eda-cli overview data/example.csv
 uv run eda-cli json-summary data/example.csv
 ```
 
-### Запуск HTTP API сервиса
+## Запуск HTTP API сервиса
 
 ```bash
 uv run uvicorn eda_cli.api:app --reload --port 8000
@@ -217,7 +217,7 @@ curl -X POST "http://localhost:8000/quality-flags-from-csv?high_cardinality_thre
 uv run pytest -q
 ```
 
-### Структура проекта
+## Структура проекта
 
 ```text
 src/eda_cli/
@@ -234,7 +234,7 @@ tests/
 └── test_core.py           # Тесты для ядра EDA
 ```
 
-### Зависимости
+## Зависимости
 
 Основные зависимости:
 - `pandas` - обработка данных
@@ -245,7 +245,7 @@ tests/
 - `python-multipart` - обработка загрузки файлов (HW04)
 - `pydantic` - валидация данных
 
-### Особенности реализации 
+## Особенности реализации 
 
 1. Обработка ошибок HTTP 400: Все эндпоинты, принимающие CSV, возвращают 400 при:
   - Неправильном формате файла
